@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 519746385863445900}
   - component: {fileID: 6737071508898030740}
   - component: {fileID: 8202379160922952888}
+  - component: {fileID: -6206591001243282878}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -180,4 +181,31 @@ MonoBehaviour:
   enemyBullet: {fileID: 3988502150364350816, guid: 5ad539a2104167642bc0c8183e1d69cb, type: 3}
   SpawnPoint: {fileID: 1625400785565456346}
   EPoint: {fileID: 0}
-  enemySpeed: 1000
+  enemySpeed: 800
+--- !u!54 &-6206591001243282878
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6371693308063128462}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 32
+  m_CollisionDetection: 0
