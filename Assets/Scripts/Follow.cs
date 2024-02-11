@@ -15,6 +15,8 @@ public class Follow : MonoBehaviour
     public Transform SpawnPoint;
     public Transform EPoint;
     public float enemySpeed;
+    public float playerSpeed;
+    public float bulletLifetime = 2.0f; // Adjust the lifetime as needed
 
     void Start()
     {
@@ -30,14 +32,20 @@ public class Follow : MonoBehaviour
 
     void Update()
     {
-        // Check if the Target is not null before setting the destination
-        if (Target != null)
+        if (Player != null)
         {
-            Target.destination = Player.position;
+            // Calculate the direction from AI to player
+            Vector3 direction = Player.position - transform.position;
+
+            // Normalize the direction to have a magnitude of 1
+            direction.Normalize();
+
+            // Move the AI towards the player
+            transform.Translate(direction * playerSpeed * Time.deltaTime);
         }
         ShootAtPlayer();
     }
-    
+
     void ShootAtPlayer()
     {
         bulletTime -= Time.deltaTime;
@@ -49,6 +57,9 @@ public class Follow : MonoBehaviour
         GameObject bulletObj = Instantiate(enemyBullet, SpawnPoint.transform.position, SpawnPoint.transform.rotation) as GameObject;
         Rigidbody bulletRig = bulletObj.GetComponent<Rigidbody>();
         bulletRig.AddForce(bulletRig.transform.forward * enemySpeed);
+
+        // Destroy the bullet after a certain amount of time
+        Destroy(bulletObj, bulletLifetime);
     }
 
     private void OnTriggerEnter(Collider other)
