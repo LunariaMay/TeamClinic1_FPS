@@ -1823,6 +1823,10 @@ PrefabInstance:
       propertyPath: speed
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 4232347538426019648, guid: 59715f5349dc73e4bb7c174ae9e94e85, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 6362378446787250113, guid: 59715f5349dc73e4bb7c174ae9e94e85, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.20451
