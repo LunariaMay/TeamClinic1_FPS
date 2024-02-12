@@ -170,6 +170,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigRamp
       objectReference: {fileID: 0}
+    - target: {fileID: 1170970068873931921, guid: 8cfd86958721ab24f8ceefb5778bfa5f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52187574c50a4254db42cc4046e53c4c, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
